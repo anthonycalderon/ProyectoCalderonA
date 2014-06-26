@@ -37,7 +37,7 @@
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="228" max="32767" attributes="0"/>
+              <EmptySpace pref="230" max="32767" attributes="0"/>
               <Component id="btningresar" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
           </Group>
@@ -65,12 +65,15 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JTextField" name="txtusuario">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtusuarioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtclave">
     </Component>
     <Component class="javax.swing.JButton" name="btningresar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton1"/>
+        <Property name="text" type="java.lang.String" value="ingresar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btningresarActionPerformed"/>
@@ -78,12 +81,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
+        <Property name="text" type="java.lang.String" value="Usuario"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel2"/>
+        <Property name="text" type="java.lang.String" value="contrase&#xf1;a"/>
       </Properties>
     </Component>
   </SubComponents>

@@ -41,16 +41,22 @@ public class LoginForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btningresar.setText("jButton1");
+        txtusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtusuarioActionPerformed(evt);
+            }
+        });
+
+        btningresar.setText("ingresar");
         btningresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btningresarActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("Usuario");
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setText("contraseña");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,7 +73,7 @@ public class LoginForm extends javax.swing.JFrame {
                     .addComponent(txtclave))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(228, Short.MAX_VALUE)
+                .addContainerGap(230, Short.MAX_VALUE)
                 .addComponent(btningresar)
                 .addGap(99, 99, 99))
         );
@@ -92,12 +98,27 @@ public class LoginForm extends javax.swing.JFrame {
 
     private void btningresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btningresarActionPerformed
         // TODO add your handling code here:
-        Connection cx;
-        cx= Conexion.getConexion();
-        if(cx==null){
-            JOptionPane.showMessageDialog(null,"exito");
+        //Connection cx;
+        //cx= Conexion.getConexion();
+        //if(cx==null){
+         //   JOptionPane.showMessageDialog(null,"exito");
+        //}
+   String user =  txtusuario.getText();
+        String pass = txtclave.getText();
+        op = aO.validarUsuario(user, pass);
+        if(op == 1){
+            PrincipalForm pf = new PrincipalForm();
+            pf.setVisible(true);            
+                    
+        }else{
+            JOptionPane.showMessageDialog(null, "No se puede conectar");
         }
+    
     }//GEN-LAST:event_btningresarActionPerformed
+
+    private void txtusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtusuarioActionPerformed
 
     /**
      * @param args the command line arguments
