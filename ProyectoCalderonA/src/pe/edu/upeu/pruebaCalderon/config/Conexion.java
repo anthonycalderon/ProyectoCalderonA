@@ -29,7 +29,7 @@ public class Conexion {
        try{
            Class.forName("com.mysql.jdbc.Driver");
            if(conex==null){
-           conex=DriverManager.getConnection(url,usuario,clave);
+           conex=DriverManager.getConnection(url,usuario,clave);//fffffffffffffff
            
            }else{
            conex=null;
